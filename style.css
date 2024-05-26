@@ -1,0 +1,254 @@
+html, body {
+	width: 100%;
+	height: 100%;
+  margin: 0 auto;
+  color: #FFF;
+  background: #1c1c1c;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
+
+input {
+	border: none;
+	outline: none;
+	background: none;
+	font-family: "Source Sans Pro", sans-serif;
+}
+
+/* div {
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
+} */
+
+/* Login */
+
+div.login-overlay {
+	width: 100%;
+	height: 100%;
+	background: #0008;
+	z-index: 100;
+	position: fixed;
+	top: 0px;
+  font-family: "Source Sans Pro", sans-serif;
+  display: none;
+}
+
+div.login-overlay.open {
+  display: inline;
+}
+
+div.login-overlay div.login-popup {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -160px 0 0 -240px;
+	border-radius: 10px;
+	box-shadow: 4px 4px 8px 0 #00000033, 4px 6px 20px 0 #00000030;
+}
+  
+div.login-overlay div.login-popup div.prompt {
+	width: 480px;
+	height: 240px;
+	max-height: 240px;
+	border-radius: 6px 6px 0 0;
+	background: #fff;
+}
+  
+div.login-overlay div.login-popup div.prompt input.login {
+	font-size: 28px;
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 14px;
+	padding: 32px;
+	font-weight: bold;
+}
+  
+div.login-overlay div.login-popup div.prompt p.login-reset {
+  margin-top: -13px;
+  text-align: right;
+  margin-right: 20px;
+  font-size: 12px;
+  color: #7b7b7b;
+  cursor: pointer;
+}
+  
+div.login-overlay div.login-popup div.login {
+	height: 80px;
+	color: #fff;
+	width: 50%;
+	float: left;
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
+}
+  
+div.login-overlay div.login-popup div.login.left {
+	border-radius: 0 0 0 6px;
+	background: #23833d;
+}
+  
+div.login-overlay div.login-popup div.login.right {
+	border-radius: 0 0 6px 0;
+	background: #33a853;
+}
+  
+div.login-overlay div.login-popup div.login:hover {
+	cursor: pointer;
+}
+  
+div.login-overlay div.login-popup div.login p {
+	margin: 0 auto;
+	text-align: center;
+	font-size: 20px;
+	padding-top: 26px;
+	color: #144e24;
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
+}
+  
+div.login-overlay div.login-popup div.login:hover p {
+	color: #fff;
+}
+
+/* Logout */
+
+#logout {
+  position: fixed;
+  background: #0006;
+  padding: 12px;
+  z-index: 20;
+  border-radius: 20px;
+  right: 8px;
+  top: 8px;
+  opacity: .2;
+	-webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+#logout:hover {
+  opacity: 1;
+}
+
+/* Layout */
+
+.container {
+  text-align: center;
+  top: 50%;
+  position: absolute;
+  width: 100%;
+  margin-top: -110px;
+  color: #FFF0;
+  z-index: 1;
+}
+
+.row {
+  width: 100%;
+  line-height: 0;
+}
+
+/* Character */
+
+
+#character {
+  font-family: 'Noto Sans SC', sans-serif;
+  font-size: 140px;
+  color: #FFFd;
+  cursor: pointer;
+}
+
+.container:hover #character {
+  color: #FFF;
+  text-shadow: 0px 4px 8px #0005;
+}
+
+/* Confidence */
+
+.row.confidence {
+  height: 60px;
+}
+
+#confidence {
+  width: 240px;
+  height: 40px;
+  margin: 0 auto;
+  border-radius: 40px;
+  margin-top: 12px;
+}
+
+.container:hover #confidence {
+  color: #FFF;
+}
+
+#confidence .col {
+  float: left;
+}
+
+#confidence .col.side {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  font-size: 30px;
+  cursor: pointer;
+  line-height: 33px;
+}
+
+.col.side:hover {
+  background: #0006;
+}
+
+#confidence .col.center {
+  width: calc(100% - 80px);
+  padding: 13px 0;
+  line-height: 12px;
+}
+
+/* Pinyin */
+
+.row.pinyin {
+  height: 14px;
+}
+
+#pinyin {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 2em;
+  color: #FFF0;
+  margin-top: 12px;
+}
+
+.container:hover #pinyin {
+  color: #FFF;
+  text-shadow: 0px 4px 8px #0005;
+}
+
+/* English */
+
+#english {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.5em;
+  color: #FFF0;
+}
+
+.container:hover #english {
+  color: #FFF;
+  text-shadow: 0px 4px 8px #0005;
+}
+
+/* CANVAS */
+
+#canvas {
+	display: block;
+	background: #1c1c1c;
+  position: fixed;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .9;
+}
